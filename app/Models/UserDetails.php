@@ -13,4 +13,8 @@ class UserDetails extends Model
     ];
 
     protected $table = 'users_details';
+
+    public function user() {
+        return $this->belongsTo('App\Models\User');
+    }
 }

@@ -15,7 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $forPage = 20;
+        $users = User::paginate($forPage);
+        return view('admin.users.index', ['users' => $users]);
     }
 
     /**
